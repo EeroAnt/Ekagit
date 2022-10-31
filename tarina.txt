@@ -1,0 +1,13 @@
+Tutkitaan jälleen tulostusta.
+
+Ensimmäisenä on Changes to be committed. Tämän otsikon alla olevat muutokset ollaan nyt siirtämässä seuraavaan committiin.
+
+Changes not staged for commit tarkoittaa muutoksia, jotka ovat Gitin tiedossa, mutta joita ei olla siirtämässä seuraavaan committiin.
+
+Lopuksi Untracked files tarkoittaa sellaisia tiedostoja, jotka eivät ole Gitin tiedossa, ja joissa tapahtuvia muutoksia ei siis seurata. Niistä ei voida silloin esimerkiksi kertoa, mitä muutoksia tiedostossa on tehty. Näitä muutoksia ei myöskään siis lisätä seuraavaan committiin.
+
+Tulostuksessa on siis tiedosto lapio_vko2 kahdesti, sillä Git seuraa muutoksia. Gitille on lisätty ensin tiedoston muutos, jossa tiedosto lapio_vko2 luotiin. Vasta tämän jälkeen tiedostoon lisättiin tekstiä. Committiin ollaan nyt lisäämässä vain muutos, jossa tiedosto luotiin, ei muutos, jossa tiedostoon lisättiin tekstiä. Tulkintaa helpottaa se, että committiin lisättävät muutokset tulostuvat oletuksena vihreinä, ja tiedoston nimen vieressä näkyy, mitä tiedostolle on tehty (esimerkiksi new file, modified, deleted).
+
+Gitin avulla voidaan myös perua muutoksia. Jos haluaisimme perua lapio_vko2.txt-tiedostoon lisäämämme tekstin, voitaisiin ajaa git checkout -- lapio_vko2.txt. Kun tämän jälkeen avaa kyseisen tiedoston, se on tyhjä, eli muutos, jossa lisättiin tekstiä, peruttiin. Komento git checkout -- mahdollistaa siis seuratuista tiedostoista muutosten perumisen.
+
+Ajamalla git add -p, voit valita muutos kerrallaan, haluatko lisätä sen Gitin committiin (y=lisää, n=älä lisää). Komento ottaa huomioon vain muutokset tiedostoissa, jotka on jo kertaalleen lisätty Gittiin. Näin ollen esimerkiksi uusia tiedostoja ei voi lisätä Gittiin komennon git add -p avulla. Pelkkä git add tiedosto lisää kaikki tiedoston muutokset Gittiin. Samalla komennolla on myös mahdollista lisätä kerralla kokonaisen kansion sisältämät muutokset.
